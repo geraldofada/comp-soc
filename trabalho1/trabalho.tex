@@ -22,28 +22,8 @@
 % ---
 % Pacotes de citações
 % ---
-% \usepackage[brazilian,hyperpageref]{backref} % Paginas com as citações na bibl
-% \usepackage[alf]{abntex2cite} % Citações padrão ABNT
 \usepackage[style=abnt]{biblatex}
 \addbibresource{referencias.bib}
-% ---
-% CONFIGURAÇÕES DE PACOTES
-% ---
-% Configurações do pacote backref
-% Usado sem a opção hyperpageref de backref
-% \renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
-% % Texto padrão antes do número das páginas
-% \renewcommand{\backref}{}
-% % Define os textos da citação
-% \renewcommand*{\backrefalt}[4]{
-%     \ifcase #1
-%         Nenhuma citação no texto.
-%     \or
-%         Citado na página #2.
-%     \else
-%         Citado #1 vezes nas páginas #2.
-%     \fi
-% }
 
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
@@ -94,7 +74,6 @@
 \begin{document}
 
 % Seleciona o idioma do documento (conforme pacotes do babel)
-%\selectlanguage{english}
 \selectlanguage{brazil}
 
 % Retira espaço extra obsoleto entre as frases.
@@ -121,7 +100,7 @@ ou acessar a internet, muitas vezes acabam sendo um universo completamente
 desconhecido para pessoas com deficiência.
 
 De acordo com a organização mundial de saúde, estima-se que mais de um bilhão
-de pessoas vivem com algum tipo de deficiência (citação4). Pessoas com algum
+de pessoas vivem com algum tipo de deficiência \cite{Disability}. Pessoas com algum
 tipo de deficiência estão mais propensas a sofrerem mais problemas de saúde,
 têm menos acesso à educação, consequentemente menos oportunidades de trabalho
 sendo assim mais provável elas estarem na linha de pobreza do que quando
@@ -131,7 +110,7 @@ O tema da acessibilidade é muito levantado enquanto sociedade, porém muitas
 vezes é desconhecido o seu significado. De acordo com o dicionário, acessibilidade
 é “propriedade do material confeccionado para que qualquer pessoa tenha acesso,
 consiga ver, usar, compreender; diz-se, principalmente, do material que se
-destina à inclusão social de pessoas com alguma deficiência" (citação 1).
+destina à inclusão social de pessoas com alguma deficiência" \cite{Acessibilidade}.
     
 Logo é fácil ver que o acesso a informática deve ser algo estudado, tendo em
 vista que o uso da tecnologia é imprescindível para todos, seja no momento de
