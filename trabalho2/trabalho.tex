@@ -1,0 +1,346 @@
+\documentclass[
+    12pt, % tamanho da fonte
+    a4paper, % tamanho do papel.
+    oneside, % impede a configuração para impressão frente e verso
+    english, % idioma adicional para hifenização
+    brazil % o último idioma é o principal do documento
+]{abntex2}
+
+% ---
+% Pacotes básicos
+% ---
+\usepackage{lmodern}
+\usepackage[T1]{fontenc} % Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc} % Codificacao do documento (conversão automática dos acentos)
+\usepackage{csquotes}
+\usepackage{indentfirst} % Indenta o primeiro parágrafo de cada seção.
+\usepackage{color} % Controle das cores
+\usepackage{graphicx} % Inclusão de gráficos
+\usepackage{microtype} % para melhorias de justificação
+% ---
+
+% Símbolo ordinal
+\usepackage{newunicodechar}
+\newunicodechar{°}{\ensuremath{^\circ}}
+
+% ---
+% Pacotes de citações
+% ---
+\usepackage[style=abnt]{biblatex}
+\addbibresource{referencias.bib}
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\title{Vantagens do software proprietário e desvantagens do software livre \\ \small{Computação e Sociedade}}
+\author{Bruno Mello\and Geraldo Fada\and Luciano Lage\and Rodrigo Correa}
+\local{Brasil, Rio de Janeiro}
+\date{10 de Agosto 2021\\ \small{1° Semestre}}
+\orientador[Professor:]{José Raphael Bokehi}
+\instituicao{Universidade Federal Fluminense}
+\tipotrabalho{Trabalho Acadêmico}
+
+% ---
+% Configurações de aparência do PDF final
+% ---
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{60,100,120}
+% informações do PDF
+\makeatletter
+\hypersetup{
+    %pagebackref=true,
+    pdftitle={\@title},
+    pdfauthor={\@author},
+    pdfsubject={\imprimirpreambulo},
+    pdfcreator={LaTeX with abnTeX2},
+    pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico},
+    colorlinks=true, % false: boxed links; true: colored links
+    linkcolor=blue, % color of internal links
+    citecolor=blue, % color of links to bibliography
+    filecolor=magenta, % color of file links
+    urlcolor=blue,
+    bookmarksdepth=4
+}
+\makeatother
+% ---
+
+% ---
+% Espaçamentos entre linhas e parágrafos
+% ---
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+
+% Seleciona o idioma do documento (conforme pacotes do babel)
+\selectlanguage{brazil}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing
+
+\imprimirfolhaderosto
+
+% ---
+% inserir o sumario
+% ---
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+\textual
+\chapter{Introdução}
+
+
+\chapter{Desenvolvimento}
+
+\section{Software sem uma visão única não progride}
+Existe um ponto negativo que afeta muito os softwares livres e é, infelizmente,
+algo inerente à sua concepção. Quando algo é feito de forma colaborativa,
+por definição, não existe uma hierarquia propriamente dita, pois é a contribuição
+da comunidade que constrói esse algo e é nesse ponto que o software livre é
+abalado em relação aos seus competidores proprietários: a falta de hierarquia.
+
+A ideia de que um software é livre e que qualquer pessoa pode contribuir com
+sua construção se desemboca em dois caminhos, ou o conceito de liberdade é
+quebrado e não é realmente todo mundo que pode contribuir ou de fato existe
+uma tentativa de aceitar todo e qualquer tipo de contribuição. De toda forma,
+ambas situações afetam igualmente os projetos abertos. Existe também um
+terceiro ramo, provavelmente o mais comum e o que gera as piores
+consequências, que ocorre quando o primeiro caminho é tomado, mas devido as
+suas consequências e sua grandeza no problema esse caso vai ser retomado por último.
+
+Para avaliar o primeiro caso podemos usar o repositório do kernel Linux como
+exemplo, que é software aberto de talvez maior importância atualmente. Sendo
+responsável por mais de 40\% do tráfego na internet \cite{LinuxVsWindows}, pelos serviços AWS
+da Amazon que silenciosamente rodam mais de um terço dos sites da web e usam
+Linux por trás (2, 3, 4) e além disso, também está por trás do Android que por
+si só domina o mercado de celulares com mais 70\% (5, 6), fica fácil notar a
+importância desse projeto para o mundo. O kernel Linux é famoso por ter uma única
+pessoa que encabeça todo o projeto (Linus Torvalds), aceitando apenas o que
+ele julga ser de excelência dos seus colaboradores (7, 8), esse simples fato
+já enfatiza o ponto: o kernel Linux não é de fato aberto, visto que não é qualquer
+um que pode modificá-lo.
+
+Olhando por outra lado, o do sucesso que o kernel adquiriu, pode-se atribuir
+grande parte desse sucesso pela hierarquia extremamente bem definida e
+consequentemente a única visão que o software segue, a do seu criador. Dessa
+forma temos como exemplo o maior ponto fora da curva, que exatamente por não
+seguir a filosofia aberta, conseguiu seguir uma única visão e manter seu nível
+de qualidade e o seu foco no que se propôs a fazer.
+
+O segundo caso beira o impossível de achar casos, pois como já foi discutido
+um projeto que bota em prática de verdade o conceito de aberto teria de aceitar
+contribuições de qualquer pessoa e isso torna qualquer tipo de progressão
+inviável. Basta pensar do ponto de vista de um engenheiro, que precisa construir
+uma ponte, mas ao mesmo tempo existem milhares de pessoas trocando o tipo
+de material que vai ser utilizado, redesenhando o projeto, mudando o destino
+final da ponte, enfim, é simplesmente inviável. E o próprio fato de não ter
+nenhum caso famoso aplicando ao pé da letra esse conceito já mostra que nenhum
+projeto se sustentou de fato aplicando esse método.
+
+Agora entrando no caso citado do segundo parágrafo que gera as piores consequências:
+a fragmentação. Esse problema ocorre quando uma pessoa ou uma parte da comunidade
+possui uma visão diferente de um projeto, e por não poder contribuir ou não concordar
+com a versão vigente se cria uma nova. A partir dessa ideia surgiu o conceito do
+fork, é criado uma bifurcação do projeto.
+
+O Android é um dos maiores exemplos desse problema, por ser um projeto também open
+source (9) as fabricantes de celulares criam versões próprias para seus aparelhos,
+a Samsung, Xiaomi, Google, LG, Huawei, Oppo, Motorola, Sony, Asus, OnePlus são alguns
+exemplos de fabricantes que suportam apenas suas variantes de android e as mesmas
+partem de versões específicas do android original, gerando uma fragmentação na
+base usuário que, por exemplo, em 2015, 40\% das pessoas usavam uma versão muito
+antiga do Android enquanto apenas 0,8\% usava a versão mais recente (10).
+
+Enquanto isso na concorrência, a Apple lida com esse problema de forma muito melhor.
+Entregando o iOS para seus usuários que é um produto fechado, com apenas celulares
+da empresa utilizando-o, no mesmo ano que o Android possuia uma minúscula base
+de 0,8\% com os celulares atualizados a Apple em menos de 44 horas já tinha
+atualizado mais 20\% da sua base (11).
+
+Pode-se citar outro exemplo mais nichado, os compositores do desktop Linux.
+Compositores são pedaços de tecnologia utilizados para fazer uma interface
+entre o sistema de janelas do sistema operacional e a computação gráfica (12),
+ou seja, é com ele que qualquer sistema operacional moderno ganha sua aparência:
+janelas transparentes e com efeito de blur, animações, sombreados e o mais importante
+o V-Sync que tira o bug visual de tearing (a tela parece ficar se dividindo
+de tempos em tempos).
+
+Um projeto que tinha como objetivo fazer exatamente essa camada entre a API
+gráfica do computador com as janelas do sistema chamado Picom (13), sofreu
+muito com a falta de uma visão única para seu projeto. Membros da comunidade
+resolveram adicionar funcionalidades que não estavam disponíveis no projeto
+oficial, levando a criação de mais outras três grandes versões do mesmo
+software (17). Uma versão adicionou a capacidade de ter bordas redondas nas
+janelas e o efeito de blur (14), outra melhorou o efeito de blur utilizando
+um algorítmo mais performático (15) e por fim a terceira tenta juntar ambas
+features mas não consegue se manter sempre atualizada (16) pois falta
+contribuintes e os donos originais não abandonam suas visões do projeto
+o que os fazem se manter com suas próprias versões. 
+
+Além de gerar inconsistências entre os projetos, os usuários que resolvem
+utilizar esses compositores se prejudicam pois precisam decidir entre
+funcionalidades que poderiam facilmente coexistir. Também é prejudicial para
+as empresas por trás das distribuições do desktop Linux que precisam manter
+essas funcionalidades e acabam por criar ainda mais uma versão nova para
+o seu projeto (18).
+
+É possível perceber como a falta de uma visão única não beneficia nenhum
+projeto na comunidade aberta e ainda sim esse é um problema que não tem
+como fugir, pois o próprio conceito de software livre cria essas fragmentações.
+
+\section{
+    Por ter que atender muitos casos normalmente não
+    atende bem um mercado específico
+}
+O mercado de tecnologia vem crescendo cada vez mais, e move uma grande
+parte da economia de alguns países, isso se dá ao fato de que atender
+uma demanda de nicho é algo muito mais lucrativo do que ter um projeto
+mais abrangente. Quando esse projeto abrangente é aberto pra todo mundo
+poder opinar, dificilmente conseguimos monetizar uma certa mudança e
+ganhar dinheiro com isso, e além disso, como todos possuem acesso àquela
+informação, dificilmente ela progride facilmente para fazer o que queremos
+rapidamente.
+
+Podemos olhar como indicativo disso o mercado empresarial, que contrata
+softwares por demanda para realizar certas tarefas específicas ou até
+mesmo gerenciar os recursos internos da firma, qualquer um pode fazer
+isso, desde um consultório ortodôntico até grandes conglomerados de
+tecnologia da informação. Existem empresas que, assim como descritas na seguinte
+matéria (referência 2), podem ser consideradas “fábricas de apps”, que
+geralmente desenvolvem um programa para fazer um certo processo e que,
+depois daquele esqueleto construído, fazem mudanças específicas para suprir
+a necessidade da empresa contratante.
+
+Se todos tem acesso ao esqueleto, ninguém pagaria esse esqueleto e sim
+somente a mudança, se tornando muito menos rentável, sendo que a parte
+mais difícil é em si construir aquela base, então pode haver até a
+possibilidade da empresa que queria aquele tal software, como ela já
+possui uma estrutura inicial, construir de maneira própria uma versão
+que faz o que ela quer, e sem o incentivo financeiro, muitas vezes ninguém
+vai fazer construir tal esqueleto.
+
+Outro ponto que acaba influenciando é que quando há algum problema naquela
+aplicação, muitas vezes quem utiliza aquele software, no caso de algum
+problema, acaba querendo procurar um suporte técnico para o produto, algo
+que dificilmente vai ser encontrado com o open source. Até pelo fato de que
+muitas vezes a utilização é pouco intuitiva para o usuário, arrumar problemas
+é ainda mais complicado. Muitas vezes as empresas contratantes até pagam para
+ter o suporte da aplicação, tornando ainda mais lucrativo e movendo ainda
+mais dinheiro. 
+
+Pode-se ver isso até mesmo na comunidade open source, em que as empresas que mandam
+são as gigantes como a Red-Hat que fornecem distribuições linux de forma
+empresarial e cobrando, a Canonical também começou a seguir por esse lado
+com versões específicas do Ubuntu, e isso só funciona pois, mais do que o
+sistema operacional fazendo o quê o contratante deseja, a empresa presta o
+serviço de suporte, e ainda fugindo completamente da ideia de código aberto
+pois essas versões acabam sendo proprietárias. 
+
+\section{Pouco intuitivo para o usuário final}
+Uma das características que desfavorece a utilização de softwares open source
+é que muitos projetos abertos só estão disponíveis para uma pequena parcela
+de pessoas que tenha o conhecimento técnico necessário para utilizar o programa,
+existem casos onde o usuário precisa compilar o programa diretamente da fonte. 
+
+Como exemplo para o caso, o integrante do grupo Bruno Mello utiliza o software
+livre LogiOps, o mesmo é utilizado para sistemas operacionais Linux, o software
+tem como objetivo mapear funções dos mouses da LogiTech, pois a empresa apenas
+desenvolveu software proprietário para Windows, deixando usuários Linux sem
+suporte para utilizar seus mouses, dessa forma a própria comunidade se uniu
+para desenvolver o LogiOps (1). O grande problema identificado pelo Bruno
+foi o fato de ser preciso compilar o código fonte do software via prompt de comando.
+
+Seguindo por essa linha de raciocínio existem também problemas relacionados a
+alguns softwares open source serem pouco intuitivos para o usuário final, pois
+nem sempre o usuário tem os conhecimentos necessários para resolver determinados
+problemas que possam vir a ocorrer, e não necessariamente terão fácil acesso
+as respostas para esses problemas. 
+
+Podemos utilizar como exemplo a Valve que está desenvolvendo uma funcionalidade
+na Steam para executar jogos em Linux que não foram desenvolvidos propriamente
+para esse tipo de sistema operacional. Realizando uma rápida busca pela internet,
+podemos facilmente achar tutoriais extremamente longos e complexos como o
+vídeo “Como Jogar no Linux em 2020 - Guia Completo (+Dicas Avançadas)” do Youtuber
+Diolinux (2). Existem diversos relatos de usuários que tiveram problemas com
+essa funcionalidade e que para poder jogar os seus jogos e se divertir um pouco,
+deveriam executar scripts manuais via prompt de comando, que como já informado
+anteriormente, não são todos os usuários que possuem esse conhecimento para seguir.
+
+Parte desses problemas relacionados a utilização do usuário final se dá em função
+da maioria dos softwares open source ser mantida quase que única e exclusivamente
+por equipes pequenas ou pela comunidade, dessa forma não é possível atender toda
+a demanda que o mercado precisa, pois não existe mão de obra para testar tantas
+possibilidades de sistemas operacionais e hardwares diferente, o que acaba gerando
+problemas de compatibilidade com diversas pessoas, o que acaba gerando mais demanda
+para correção e consulta, que muitas vezes não tem resposta de imediato. Esse
+problema acaba se tornando uma bola de neve, pois não é possível dispor de uma força
+tarefa para atuar em tantos campos, e sem visão econômica para o projeto em si, é
+mais difícil ainda investir para aumentar a equipe, que muitas vezes trabalha no “amor”.
+
+Assim como os problemas relacionados a compatibilidade, muitas vezes não existe
+“braço” o suficiente para atuar em uma interface gráfica intuitiva para o usuário,
+e muitos programas rodam sua totalidade via prompt de comando ou com pouca
+interação gráfica. Utilizando como exemplo o VLC Player utiliza uma interface
+gráfica mais bruta e rustica, em tempos onde o design da interface tem tornado-se
+cada vez mais simplificado, intuitivo e moderno. Navegando pelos fóruns da internet,
+é possível observar que diversos usuários do VLC Player em linux, apresentam
+constantes problemas em decorrência de sua interface, que só são resolvidos muitas
+vezes recompilando o software, exemplo disso temos o tópico em um fórum direcionado
+para o sistema operacional UBUNTU, onde um usuário tem o seu VLC simplesmente sem
+interface alguma, onde precisa seguir passos via prompt de comando para poder corrigir (3). 
+
+Todos esses pontos acabam levando a poucos usuários que realmente tenham conhecimento
+para utilizar esses software, dessa forma a evolução dos mesmos fica estagnada,
+pois não ter público equivale a não ter sucesso no mercado, sem sucesso no
+mercado não existe avanço do projeto.
+
+
+\section{Dificuldade de empacotamento}
+Outro ponto de desvantagem do software open source, como explica Linus Torvalds em
+uma DebConf, (referência 1) dessa vez focando especificamente no empacotamento e
+distribuição de programas, é a existência de diversas variações de sistemas operacionais
+baseados em linux, fazendo com que seja necessária a compilação e manutenção de
+binários para cada uma dessas versões. Um desenvolvedor de uma aplicação consegue
+facilmente criar uma compilação do seu programa para windows, e essa mesma compilação
+será utilizada por todos os usuários desse sistema, no máximo sendo necessária a
+distinção entre uma compilação de 32 bits e outra de 64 bits. O mesmo pode ser dito
+para aplicações geradas para MacOS: O desenvolvedor só precisa se preocupar em compilar
+para esta plataforma. No caso de linux isso é um pouco diferente, existem sistemas
+baseados em debian, arch, bsd, e mesmo sistemas de mesma base possuem peculiaridades.
+Ao compilar para debian stable, por exemplo, é necessário que o programa esteja de
+acordo com certas regras de uso de bibliotecas compartilhadas para que esse programa
+seja aceito nos repositórios da distribuição.
+
+"Making binaries for linux desktop applications is a major fucking pain in the ass"
+- Linus Torvalds
+
+
+% ----------------------------------------------------------
+% Finaliza a parte no bookmark do PDF
+% para que se inicie o bookmark na raiz
+% e adiciona espaço de parte no Sumário
+% ----------------------------------------------------------
+\phantompart
+% ---
+% Conclusão
+% ---
+\chapter{Conclusão}
+
+\postextual
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+\printbibliography
+%---------------------------------------------------------------------
+% INDICE REMISSIVO
+%---------------------------------------------------------------------
+\phantompart
+\printindex
+%---------------------------------------------------------------------
+\end{document}
