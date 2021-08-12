@@ -118,11 +118,13 @@ Para avaliar o primeiro caso podemos usar o repositório do kernel Linux como
 exemplo, que é software aberto de talvez maior importância atualmente. Sendo
 responsável por mais de 40\% do tráfego na internet \cite{LinuxVsWindows}, pelos serviços AWS
 da Amazon que silenciosamente rodam mais de um terço dos sites da web e usam
-Linux por trás (2, 3, 4) e além disso, também está por trás do Android que por
-si só domina o mercado de celulares com mais 70\% (5, 6), fica fácil notar a
-importância desse projeto para o mundo. O kernel Linux é famoso por ter uma única
-pessoa que encabeça todo o projeto (Linus Torvalds), aceitando apenas o que
-ele julga ser de excelência dos seus colaboradores (7, 8), esse simples fato
+Linux por trás \cite{WhatAWSDoes2020,brandomUsingInternetAmazon2018,clarkHowAmazonWeb2014}
+e além disso, também está por trás do Android que por
+si só domina o mercado de celulares com mais 70\% \cite{101AndroidStats2019,burnettePatrickBradyDissects},
+fica fácil notar a importância desse projeto para o mundo. O kernel Linux é
+famoso por ter uma única pessoa que encabeça todo o projeto (Linus Torvalds),
+aceitando apenas o que ele julga ser de excelência dos seus colaboradores
+\cite{swannerLinuxCreatorLinus2015,osborneLinusTorvaldsDon}, esse simples fato
 já enfatiza o ponto: o kernel Linux não é de fato aberto, visto que não é qualquer
 um que pode modificá-lo.
 
@@ -150,36 +152,37 @@ com a versão vigente se cria uma nova. A partir dessa ideia surgiu o conceito d
 fork, é criado uma bifurcação do projeto.
 
 O Android é um dos maiores exemplos desse problema, por ser um projeto também open
-source (9) as fabricantes de celulares criam versões próprias para seus aparelhos,
+source \cite{PlatformSuperprojectAndroid} as fabricantes de celulares criam versões
+próprias para seus aparelhos,
 a Samsung, Xiaomi, Google, LG, Huawei, Oppo, Motorola, Sony, Asus, OnePlus são alguns
 exemplos de fabricantes que suportam apenas suas variantes de android e as mesmas
 partem de versões específicas do android original, gerando uma fragmentação na
 base usuário que, por exemplo, em 2015, 40\% das pessoas usavam uma versão muito
-antiga do Android enquanto apenas 0,8\% usava a versão mais recente (10).
+antiga do Android enquanto apenas 0,8\% usava a versão mais recente \cite{GraficoMostraComo2015}.
 
 Enquanto isso na concorrência, a Apple lida com esse problema de forma muito melhor.
 Entregando o iOS para seus usuários que é um produto fechado, com apenas celulares
 da empresa utilizando-o, no mesmo ano que o Android possuia uma minúscula base
 de 0,8\% com os celulares atualizados a Apple em menos de 44 horas já tinha
-atualizado mais 20\% da sua base (11).
+atualizado mais 20\% da sua base \cite{cfaAppleIOSPasses2015}.
 
 Pode-se citar outro exemplo mais nichado, os compositores do desktop Linux.
 Compositores são pedaços de tecnologia utilizados para fazer uma interface
-entre o sistema de janelas do sistema operacional e a computação gráfica (12),
+entre o sistema de janelas do sistema operacional e a computação gráfica \cite{CompositorsLinux},
 ou seja, é com ele que qualquer sistema operacional moderno ganha sua aparência:
 janelas transparentes e com efeito de blur, animações, sombreados e o mais importante
 o V-Sync que tira o bug visual de tearing (a tela parece ficar se dividindo
 de tempos em tempos).
 
 Um projeto que tinha como objetivo fazer exatamente essa camada entre a API
-gráfica do computador com as janelas do sistema chamado Picom (13), sofreu
+gráfica do computador com as janelas do sistema chamado Picom \cite{yshuiPicom2021}, sofreu
 muito com a falta de uma visão única para seu projeto. Membros da comunidade
 resolveram adicionar funcionalidades que não estavam disponíveis no projeto
 oficial, levando a criação de mais outras três grandes versões do mesmo
-software (17). Uma versão adicionou a capacidade de ter bordas redondas nas
-janelas e o efeito de blur (14), outra melhorou o efeito de blur utilizando
-um algorítmo mais performático (15) e por fim a terceira tenta juntar ambas
-features mas não consegue se manter sempre atualizada (16) pois falta
+software \cite{PicomStandaloneXorg}. Uma versão adicionou a capacidade de ter bordas redondas nas
+janelas e o efeito de blur \cite{IbhagwanPicomLightweight}, outra melhorou o efeito de blur utilizando
+um algorítmo mais performático \cite{Tryone144PicomFeature} e por fim a terceira tenta juntar ambas
+features mas não consegue se manter sempre atualizada \cite{JonaburgPicomLightweight} pois falta
 contribuintes e os donos originais não abandonam suas visões do projeto
 o que os fazem se manter com suas próprias versões. 
 
@@ -188,16 +191,13 @@ utilizar esses compositores se prejudicam pois precisam decidir entre
 funcionalidades que poderiam facilmente coexistir. Também é prejudicial para
 as empresas por trás das distribuições do desktop Linux que precisam manter
 essas funcionalidades e acabam por criar ainda mais uma versão nova para
-o seu projeto (18).
+o seu projeto \cite{kochtaLinuxDesktopCompositors2018}.
 
 É possível perceber como a falta de uma visão única não beneficia nenhum
 projeto na comunidade aberta e ainda sim esse é um problema que não tem
 como fugir, pois o próprio conceito de software livre cria essas fragmentações.
 
-\section{
-    Por ter que atender muitos casos normalmente não
-    atende bem um mercado específico
-}
+\section{Não atende bem um mercado específico}
 O mercado de tecnologia vem crescendo cada vez mais, e move uma grande
 parte da economia de alguns países, isso se dá ao fato de que atender
 uma demanda de nicho é algo muito mais lucrativo do que ter um projeto
@@ -212,7 +212,7 @@ softwares por demanda para realizar certas tarefas específicas ou até
 mesmo gerenciar os recursos internos da firma, qualquer um pode fazer
 isso, desde um consultório ortodôntico até grandes conglomerados de
 tecnologia da informação. Existem empresas que, assim como descritas na seguinte
-matéria (referência 2), podem ser consideradas “fábricas de apps”, que
+matéria \cite{XAppsSoftwareSob}, podem ser consideradas “fábricas de apps”, que
 geralmente desenvolvem um programa para fazer um certo processo e que,
 depois daquele esqueleto construído, fazem mudanças específicas para suprir
 a necessidade da empresa contratante.
@@ -253,7 +253,8 @@ livre LogiOps, o mesmo é utilizado para sistemas operacionais Linux, o software
 tem como objetivo mapear funções dos mouses da LogiTech, pois a empresa apenas
 desenvolveu software proprietário para Windows, deixando usuários Linux sem
 suporte para utilizar seus mouses, dessa forma a própria comunidade se uniu
-para desenvolver o LogiOps (1). O grande problema identificado pelo Bruno
+para desenvolver o LogiOps \cite{garciaexplicaLogitechOptionsPara}.
+O grande problema identificado pelo Bruno
 foi o fato de ser preciso compilar o código fonte do software via prompt de comando.
 
 Seguindo por essa linha de raciocínio existem também problemas relacionados a
@@ -267,7 +268,7 @@ na Steam para executar jogos em Linux que não foram desenvolvidos propriamente
 para esse tipo de sistema operacional. Realizando uma rápida busca pela internet,
 podemos facilmente achar tutoriais extremamente longos e complexos como o
 vídeo “Como Jogar no Linux em 2020 - Guia Completo (+Dicas Avançadas)” do Youtuber
-Diolinux (2). Existem diversos relatos de usuários que tiveram problemas com
+Diolinux \cite{diolinuxComoJogarNo}. Existem diversos relatos de usuários que tiveram problemas com
 essa funcionalidade e que para poder jogar os seus jogos e se divertir um pouco,
 deveriam executar scripts manuais via prompt de comando, que como já informado
 anteriormente, não são todos os usuários que possuem esse conhecimento para seguir.
@@ -293,7 +294,8 @@ cada vez mais simplificado, intuitivo e moderno. Navegando pelos fóruns da inte
 constantes problemas em decorrência de sua interface, que só são resolvidos muitas
 vezes recompilando o software, exemplo disso temos o tópico em um fórum direcionado
 para o sistema operacional UBUNTU, onde um usuário tem o seu VLC simplesmente sem
-interface alguma, onde precisa seguir passos via prompt de comando para poder corrigir (3). 
+interface alguma, onde precisa seguir passos via prompt de comando
+para poder corrigir \cite{VLCMediaPlayer}. 
 
 Todos esses pontos acabam levando a poucos usuários que realmente tenham conhecimento
 para utilizar esses software, dessa forma a evolução dos mesmos fica estagnada,
@@ -303,7 +305,7 @@ mercado não existe avanço do projeto.
 
 \section{Dificuldade de empacotamento}
 Outro ponto de desvantagem do software open source, como explica Linus Torvalds em
-uma DebConf, (referência 1) dessa vez focando especificamente no empacotamento e
+uma DebConf, \cite{gentoomanLinusTorvaldsWhy} dessa vez focando especificamente no empacotamento e
 distribuição de programas, é a existência de diversas variações de sistemas operacionais
 baseados em linux, fazendo com que seja necessária a compilação e manutenção de
 binários para cada uma dessas versões. Um desenvolvedor de uma aplicação consegue
