@@ -95,6 +95,46 @@
 
 \textual
 \chapter{Introdução}
+No cotidiano de toda a população, a tecnologia está cada vez mais inserida,
+seja através de computadores, notebooks, smartphones, tablets, entre outros.
+O uso dessas tecnologias normalmente se dá através de algo físico, algo
+palpável, que denotamos de hardware, porém ele sozinho não faz muita coisa,
+é somente uma junção de componentes eletrônicos que tem um objetivo específico.
+Este objetivo é alcançado utilizando um conjunto de instruções que dita ao
+hardware o que fazer, chamamos esse conjunto de instruções de software.
+
+O software é basicamente um programa desenvolvido por um grupo ou por uma pessoa
+para executar certa tarefa. Com o constante avanço da tecnologia, o software acabou
+sendo ramificado. Seguindo a definição proposta pelo site RockContent \cite{TiposSoftwareQuais2019},
+podemos classificar os softwares em três tipos principais: softwares de sistema,
+softwares de aplicação e softwares de programação. Para entender a classificação de
+softwares de sistema podemos pegar como exemplo os sistemas operacionais, como Android,
+Windows, MacOS e as distribuições Linux como Ubuntu, Linux Mint, Pop!\_OS, Fedora, Arch Linux, entre outras.
+
+Esta primeira camada de software possui como objetivo gerenciar os recursos físicos do
+hardware e prover uma interface comum para as aplicações que nele rodam. Já a camada de
+softwares de aplicação engloba todos os aplicativos que utilizamos no dia a dia, como
+videogames, aplicações de reprodução de mídia, exploradores de arquivos, editores de texto,
+editores de imagem e vídeo, entre outros. Por último temos a camada de softwares de
+programação, que funciona como o meio termo entre as duas etapas descritas anteriormente.
+Compiladores, drivers e bibliotecas de ligação dinâmica (arquivos .dll no windows e .so no linux)
+são exemplos de software que entram na categoria de programas de aplicação.
+
+Como a informática tem se tornado cada vez mais importante, tanto socialmente quanto
+economicamente, esses programas tem alguns caminhos legais a seguir, às vezes acabam
+virando propriedade intelectual de certa empresa ou pessoa, que são os chamados softwares
+proprietários e às vezes acabam se tornando um projeto de domínio público, algo colaborativo
+que diversas pessoas podem contribuir, o que chamamos de softwares livre.
+
+Dito isso, podemos pensar que há diferenças entre software proprietário e livre, havendo
+vantagens e desvantagens em cada um, e então cabe às pessoas da área da tecnologia
+estudarem esses detalhes para, no momento de criação de um projeto, estarem cientes
+dessas diferenças e escolher se o projeto deve ser com código fechado ou aberto. Para que
+se possa escolher por qual caminho seguir, seja um software livre ou proprietário, é
+necessário responder alguns questionamentos, como quem será o público alvo do projeto, que
+espaço no mercado se tem como meta, qual a velocidade pretendida para avanço do projeto,
+como será realizado o controle de versões, só depois de responder perguntas desse tipo
+que se é possível tomar uma decisão final.
 
 
 \chapter{Desenvolvimento}
@@ -150,7 +190,7 @@ Agora entrando no caso citado no segundo parágrafo que gera as piores consequê
 a fragmentação. Esse problema ocorre quando uma pessoa ou uma parte da comunidade
 possui uma visão diferente de um projeto, e por não poder contribuir ou não concordar
 com a versão vigente se cria uma nova. A partir dessa ideia surgiu o conceito do
-fork, criado pelo github, onde se cria uma cópia do projeto.
+fork, criado pelo github, em que se cria uma cópia do projeto.
 
 O Android é um dos maiores exemplos desse problema, por ser um projeto também open
 source \cite{PlatformSuperprojectAndroid} as fabricantes de celulares criam versões
@@ -201,18 +241,19 @@ projeto na comunidade aberta e ainda sim esse é um problema que não tem
 como fugir, pois o próprio conceito de software livre cria essas fragmentações.
 
 \section{Não atende bem um mercado específico}
-O mercado de tecnologia vem crescendo cada vez mais, e move uma grande
-parte da economia de alguns países, isso se dá ao fato de que atender
-uma demanda de nicho é algo muito mais lucrativo do que ter um projeto
+O mercado de tecnologia vem crescendo cada vez mais e move uma grande
+parte da economia de alguns países. Partindo do pressuposto de que, no processo
+de desenvolvimento de software, o lucro é visado, atender uma demanda de
+nicho é algo muito mais lucrativo do que ter um projeto
 mais abrangente. Quando esse projeto abrangente é aberto pra todo mundo
-poder opinar, dificilmente conseguimos monetizar uma certa mudança e
-ganhar dinheiro com isso, e além disso, como todos possuem acesso àquela
+opinar, dificilmente consegue-se monetizar uma certa mudança e
+ganhar dinheiro com isso. Além disso, como todos possuem acesso àquela
 informação, dificilmente ela progride facilmente para fazer o que queremos
 rapidamente.
 
 Podemos olhar como indicativo disso o mercado empresarial, que contrata
 softwares por demanda para realizar certas tarefas específicas ou até
-mesmo gerenciar os recursos internos da firma, qualquer um pode fazer
+mesmo gerenciar os recursos internos da firma. Qualquer um pode fazer
 isso, desde um consultório ortodôntico até grandes conglomerados de
 tecnologia da informação. Existem empresas que, assim como descritas na seguinte
 matéria \cite{XAppsSoftwareSob2019}, podem ser consideradas “fábricas de apps”, que
@@ -220,39 +261,37 @@ geralmente desenvolvem um programa para fazer um certo processo e que,
 depois daquele esqueleto construído, fazem mudanças específicas para suprir
 a necessidade da empresa contratante.
 
-Se todos tem acesso ao esqueleto, ninguém pagaria esse esqueleto e sim
-somente a mudança, se tornando muito menos rentável, sendo que a parte
-mais difícil é em si construir aquela base, então pode haver até a
-possibilidade da empresa que queria aquele tal software, como ela já
-possui uma estrutura inicial, construir de maneira própria uma versão
-que faz o que ela quer, e sem o incentivo financeiro, muitas vezes ninguém
-vai fazer construir tal esqueleto.
+Se todos tem acesso ao esqueleto, ninguém pagaria por ele e sim
+somente a mudança, se tornando muito menos rentável. A parte
+mais difícil em si é construir aquela base, como ela já
+possui uma estrutura inicial, pode haver até a
+possibilidade da empresa que queria aquele tal software
+construir de maneira própria uma versão que faz o que ela quer,
+e sem o incentivo financeiro muitas vezes ninguém vai construir tal esqueleto.
 
 Outro ponto que acaba influenciando é que quando há algum problema naquela
-aplicação, muitas vezes quem utiliza aquele software, no caso de algum
-problema, acaba querendo procurar um suporte técnico para o produto, algo
-que dificilmente vai ser encontrado com o open source. Até pelo fato de que
+aplicação, os usuários tem vontade de encontrar um suporte técnico do produto,
+algo que dificilmente ocorreria com o open source. Até pelo fato de que
 muitas vezes a utilização é pouco intuitiva para o usuário, arrumar problemas
 é ainda mais complicado. Muitas vezes as empresas contratantes até pagam para
 ter o suporte da aplicação, tornando ainda mais lucrativo e movendo ainda
 mais dinheiro. 
 
 Pode-se ver isso até mesmo na comunidade open source, em que as empresas que mandam
-são as gigantes como a Red-Hat que fornecem distribuições linux de forma
-empresarial e cobrando, a Canonical também começou a seguir por esse lado
-com versões específicas do Ubuntu, e isso só funciona pois, mais do que o
-sistema operacional fazendo o quê o contratante deseja, a empresa presta o
-serviço de suporte, e ainda fugindo completamente da ideia de código aberto
-pois essas versões acabam sendo proprietárias. 
+são as gigantes, como a Red-Hat, que fornecem distribuições linux de forma
+empresarial e cobrando. A Canonical também começou a seguir por esse lado
+com versões específicas do Ubuntu, e isso só funciona pois além de prover
+o sistema operacional a empresa presta serviço de suporte. Essa ideia acaba fugindo
+do conceito de código aberto pois essas versões são proprietárias. 
 
 \section{Pouco intuitivo para o usuário final}
 Uma das características que desfavorece a utilização de softwares open source
 é que muitos projetos abertos só estão disponíveis para uma pequena parcela
 de pessoas que tenha o conhecimento técnico necessário para utilizar o programa,
-existem casos onde o usuário precisa compilar o programa diretamente da fonte. 
+existem casos em que o usuário precisa compilar o programa diretamente da fonte. 
 
 Como exemplo para o caso, o integrante do grupo Bruno Mello utiliza o software
-livre LogiOps, o mesmo é utilizado para sistemas operacionais Linux, o software
+livre LogiOps, que é utilizado em sistemas operacionais Linux. A aplicação
 tem como objetivo mapear funções dos mouses da LogiTech, pois a empresa apenas
 desenvolveu software proprietário para Windows, deixando usuários Linux sem
 suporte para utilizar seus mouses, dessa forma a própria comunidade se uniu
@@ -260,10 +299,10 @@ para desenvolver o LogiOps \cite{garciaexplicaLogitechOptionsPara2021}.
 O grande problema identificado pelo Bruno
 foi o fato de ser preciso compilar o código fonte do software via prompt de comando.
 
-Seguindo por essa linha de raciocínio existem também problemas relacionados a
-alguns softwares open source serem pouco intuitivos para o usuário final, pois
+Seguindo por essa linha de raciocínio, outro problema relevante é o fato de esses softwares
+costumam ser pouco intuitivos para o usuário final, pois
 nem sempre o usuário tem os conhecimentos necessários para resolver determinados
-problemas que possam vir a ocorrer, e não necessariamente terão fácil acesso
+problemas que podem ocorrer, não tendo, necessariamente, fácil acesso
 as respostas para esses problemas. 
 
 Podemos utilizar como exemplo a Valve que está desenvolvendo uma funcionalidade
@@ -276,48 +315,49 @@ essa funcionalidade e que para poder jogar os seus jogos e se divertir um pouco,
 deveriam executar scripts manuais via prompt de comando, que como já informado
 anteriormente, não são todos os usuários que possuem esse conhecimento para seguir.
 
-Parte desses problemas relacionados a utilização do usuário final se dá em função
+Parte desses problemas relacionados à utilização pelo usuário final se dá em função
 da maioria dos softwares open source ser mantida quase que única e exclusivamente
-por equipes pequenas ou pela comunidade, dessa forma não é possível atender toda
+por equipes pequenas ou pela comunidade. Dessa forma não é possível atender toda
 a demanda que o mercado precisa, pois não existe mão de obra para testar tantas
-possibilidades de sistemas operacionais e hardwares diferente, o que acaba gerando
-problemas de compatibilidade com diversas pessoas, o que acaba gerando mais demanda
+possibilidades de sistemas operacionais e hardwares diferentes, o que acaba gerando
+problemas de compatibilidade para diversas pessoas, que por usa vez gera mais demanda
 para correção e consulta, que muitas vezes não tem resposta de imediato. Esse
-problema acaba se tornando uma bola de neve, pois não é possível dispor de uma força
-tarefa para atuar em tantos campos, e sem visão econômica para o projeto em si, é
-mais difícil ainda investir para aumentar a equipe, que muitas vezes trabalha no “amor”.
+problema se torna uma bola de neve, pois não é possível dispor de uma força
+tarefa para atuar em tantos campos. Por último, sem visão econômica para o projeto em si é
+mais difícil ainda investir para aumentar a equipe, que muitas vezes trabalha no ``amor''.
 
 Assim como os problemas relacionados a compatibilidade, muitas vezes não existe
-“braço” o suficiente para atuar em uma interface gráfica intuitiva para o usuário,
-e muitos programas rodam sua totalidade via prompt de comando ou com pouca
-interação gráfica. Utilizando como exemplo o VLC Player utiliza uma interface
-gráfica mais bruta e rustica, em tempos onde o design da interface tem tornado-se
-cada vez mais simplificado, intuitivo e moderno. Navegando pelos fóruns da internet,
-é possível observar que diversos usuários do VLC Player em linux, apresentam
-constantes problemas em decorrência de sua interface, que só são resolvidos muitas
-vezes recompilando o software, exemplo disso temos o tópico em um fórum direcionado
-para o sistema operacional UBUNTU, onde um usuário tem o seu VLC simplesmente sem
-interface alguma, onde precisa seguir passos via prompt de comando
-para poder corrigir \cite{VLCMediaPlayer2018}. 
+mão de obra o suficiente para atuar em uma interface gráfica intuitiva para o usuário,
+e muitos programas rodam em sua totalidade via prompt de comando ou com pouca
+interação gráfica. Tomando como exemplo o VLC Player, este utiliza uma interface
+gráfica mais bruta e rústica, em tempos que o design da interface tem se tornado
+cada vez mais simplificado, intuitivo e moderno. Navegando pelos fóruns da internet
+é possível observar que diversos usuários do VLC Player no Linux apresentam
+constantes problemas em sua interface gráfica, que muitas vezes só são resolvidos
+recompilando o software. Como exemplo disso temos o tópico de um fórum direcionado
+para o sistema operacional Ubuntu, em que um usuário reclama de um \textit{bug} em que
+seu VLC inicia sem interface gráfica, precisando seguir passos via prompt de comando
+para corrigir o problema \cite{VLCMediaPlayer2018}. 
 
-Todos esses pontos acabam levando a poucos usuários que realmente tenham conhecimento
-para utilizar esses software, dessa forma a evolução dos mesmos fica estagnada,
-pois não ter público equivale a não ter sucesso no mercado, sem sucesso no
+Todos esses pontos criam um empecilho para usuários leigos que por ventura tentem
+utilizar esses softwares. Dessa forma a evolução dos mesmos fica estagnada,
+pois não ter público equivale a não ter sucesso no mercado e sem sucesso no
 mercado não existe avanço do projeto.
 
 \section{Dificuldade de empacotamento}
 Outro ponto de desvantagem do software open source, como explica Linus Torvalds em
 uma DebConf, \cite{gentoomanLinusTorvaldsWhy2021} dessa vez focando especificamente no empacotamento e
 distribuição de programas, é a existência de diversas variações de sistemas operacionais
-baseados em linux, fazendo com que seja necessária a compilação e manutenção de
-binários para cada uma dessas versões. Um desenvolvedor de uma aplicação consegue
-facilmente criar uma compilação do seu programa para windows, e essa mesma compilação
-será utilizada por todos os usuários desse sistema, no máximo sendo necessária a
-distinção entre uma compilação de 32 bits e outra de 64 bits. O mesmo pode ser dito
-para aplicações geradas para MacOS: O desenvolvedor só precisa se preocupar em compilar
-para esta plataforma. No caso de linux isso é um pouco diferente, existem sistemas
-baseados em debian, arch, bsd, e mesmo sistemas de mesma base possuem peculiaridades.
-Ao compilar para debian stable, por exemplo, é necessário que o programa esteja de
+baseados em Linux, fazendo com que seja necessária a compilação e manutenção de
+binários para cada uma dessas versões.
+
+Um desenvolvedor de uma aplicação consegue facilmente criar um executável do seu programa para Windows,
+e esse mesmo executável será utilizado por todos os usuários desse sistema, no máximo sendo necessária a
+distinção entre um binário de 32 bits e outro de 64 bits. O mesmo pode ser dito
+para aplicações geradas para MacOS: o desenvolvedor só precisa se preocupar em compilar
+para esta plataforma. No caso de Linux isso é um pouco diferente, existem sistemas
+baseados em Debian, Arch, BSD, entre outros, e até sistemas de mesma base possuem peculiaridades.
+Ao compilar para Debian Stable, por exemplo, é necessário que o programa esteja de
 acordo com certas regras de uso de bibliotecas compartilhadas para que esse programa
 seja aceito nos repositórios da distribuição.
 
@@ -337,6 +377,20 @@ seja aceito nos repositórios da distribuição.
 % Conclusão
 % ---
 \chapter{Conclusão}
+Tendo em vista todos os pontos discutidos nesse documento, podemos
+perceber que o software livre está longe de ser a prova de falhas.
+No entanto, isso não significa que essas sejam as únicas características
+a serem levadas em consideração. Podemos pegar como exemplo o Blender,
+uma aplicação muito bem conceituada no mundo open source e amplamente
+utilizada na criação de diversas produções comerciais de altíssima qualidade.
+
+No fim, como qualquer outra dualidade na vida,
+é importante colocar todos esses pontos na balança, pois
+o melhor caminho a se seguir depende de fatores como: quem utilizará
+o programa; como o projeto será introduzido no mercado; entre outros
+fatores. Pois independente de ser livre ou proprietário,
+haverão pontos positivos e pontos negativos, e escolher quais problemas
+pretende-se enfrentar irá definir a taxa de sucesso que o projeto possa ter.
 
 \postextual
 % ----------------------------------------------------------
