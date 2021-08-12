@@ -99,7 +99,7 @@
 \chapter{Desenvolvimento}
 
 \section{Software sem uma visão única não progride}
-Existe um ponto negativo que afeta muito os softwares livres e é, infelizmente,
+Existe um ponto negativo que afeta muito os softwares livres e é
 algo inerente à sua concepção. Quando algo é feito de forma colaborativa,
 por definição, não existe uma hierarquia propriamente dita, pois é a contribuição
 da comunidade que constrói esse algo e é nesse ponto que o software livre é
@@ -111,8 +111,9 @@ quebrado e não é realmente todo mundo que pode contribuir ou de fato existe
 uma tentativa de aceitar todo e qualquer tipo de contribuição. De toda forma,
 ambas situações afetam igualmente os projetos abertos. Existe também um
 terceiro ramo, provavelmente o mais comum e o que gera as piores
-consequências, que ocorre quando o primeiro caminho é tomado, mas devido as
-suas consequências e sua grandeza no problema esse caso vai ser retomado por último.
+consequências, que ocorre quando o primeiro caminho é tomado, mas devido às
+suas consequências e sua grandeza no problema esse caso será analisado mais à
+frente neste artigo.
 
 Para avaliar o primeiro caso podemos usar o repositório do kernel Linux como
 exemplo, que é software aberto de talvez maior importância atualmente. Sendo
@@ -126,50 +127,51 @@ ele julga ser de excelência dos seus colaboradores (7, 8), esse simples fato
 já enfatiza o ponto: o kernel Linux não é de fato aberto, visto que não é qualquer
 um que pode modificá-lo.
 
-Olhando por outra lado, o do sucesso que o kernel adquiriu, pode-se atribuir
-grande parte desse sucesso pela hierarquia extremamente bem definida e
-consequentemente a única visão que o software segue, a do seu criador. Dessa
-forma temos como exemplo o maior ponto fora da curva, que exatamente por não
-seguir a filosofia aberta, conseguiu seguir uma única visão e manter seu nível
-de qualidade e o seu foco no que se propôs a fazer.
+Olhando por outra lado, podemos atribuir grande parte do sucesso do kernel Linux
+a essa hierarquia extremamente bem definida e consequentemente à única visão que
+o software segue, a do seu criador. Dessa forma temos como exemplo o maior ponto
+fora da curva, que exatamente por não seguir a filosofia aberta, conseguiu seguir
+uma única visão e manter seu nível de qualidade e o seu foco no que se propôs a fazer.
 
-O segundo caso beira o impossível de achar casos, pois como já foi discutido
+O segundo caso beira o impossível de achar exemplos, pois como já foi discutido acima,
 um projeto que bota em prática de verdade o conceito de aberto teria de aceitar
 contribuições de qualquer pessoa e isso torna qualquer tipo de progressão
 inviável. Basta pensar do ponto de vista de um engenheiro, que precisa construir
 uma ponte, mas ao mesmo tempo existem milhares de pessoas trocando o tipo
 de material que vai ser utilizado, redesenhando o projeto, mudando o destino
-final da ponte, enfim, é simplesmente inviável. E o próprio fato de não ter
-nenhum caso famoso aplicando ao pé da letra esse conceito já mostra que nenhum
+final da ponte, enfim, é simplesmente inviável. E o próprio fato de não existir
+nenhum caso bem conhecido aplicando ao pé da letra esse conceito já mostra que nenhum
 projeto se sustentou de fato aplicando esse método.
 
-Agora entrando no caso citado do segundo parágrafo que gera as piores consequências:
+Agora entrando no caso citado no segundo parágrafo que gera as piores consequências:
 a fragmentação. Esse problema ocorre quando uma pessoa ou uma parte da comunidade
 possui uma visão diferente de um projeto, e por não poder contribuir ou não concordar
 com a versão vigente se cria uma nova. A partir dessa ideia surgiu o conceito do
-fork, é criado uma bifurcação do projeto.
+fork, criado pelo github, onde se cria uma cópia do projeto.
 
 O Android é um dos maiores exemplos desse problema, por ser um projeto também open
 source (9) as fabricantes de celulares criam versões próprias para seus aparelhos,
 a Samsung, Xiaomi, Google, LG, Huawei, Oppo, Motorola, Sony, Asus, OnePlus são alguns
 exemplos de fabricantes que suportam apenas suas variantes de android e as mesmas
 partem de versões específicas do android original, gerando uma fragmentação na
-base usuário que, por exemplo, em 2015, 40\% das pessoas usavam uma versão muito
-antiga do Android enquanto apenas 0,8\% usava a versão mais recente (10).
+bases usuários. A principal consequência disso é a ausência de atualizações do sistema.
+Em 2015, 40\% das pessoas utilizavam uma versão antiga do sistema Android, enquanto
+apenas 0,8\% utilizavam a versão mais recente (10).
 
 Enquanto isso na concorrência, a Apple lida com esse problema de forma muito melhor.
-Entregando o iOS para seus usuários que é um produto fechado, com apenas celulares
-da empresa utilizando-o, no mesmo ano que o Android possuia uma minúscula base
-de 0,8\% com os celulares atualizados a Apple em menos de 44 horas já tinha
-atualizado mais 20\% da sua base (11).
+Como o IOS é um sistema disponibilizado para pouquíssimos aparelhos, em comparação ao sistema
+Android, a entrega de atualizações também se dá de forma bem frequente. No mesmo ano de 2015,
+enquanto o Android possuia uma base de apenas 0,8\% com os celulare na versão mais recente,
+a Apple em menos de 24 horas já tinha mais de 20\% da sua base de usuários com os
+dispositivos rodando a versão mais recente do IOS (11).
 
 Pode-se citar outro exemplo mais nichado, os compositores do desktop Linux.
 Compositores são pedaços de tecnologia utilizados para fazer uma interface
 entre o sistema de janelas do sistema operacional e a computação gráfica (12),
 ou seja, é com ele que qualquer sistema operacional moderno ganha sua aparência:
-janelas transparentes e com efeito de blur, animações, sombreados e o mais importante
-o V-Sync que tira o bug visual de tearing (a tela parece ficar se dividindo
-de tempos em tempos).
+janelas transparentes e com efeito de blur, animações, sombreados e o mais importante:
+o V-Sync, responsável por solucionar o bug visual de tearing (a tela parece
+ficar se dividindo de tempos em tempos).
 
 Um projeto que tinha como objetivo fazer exatamente essa camada entre a API
 gráfica do computador com as janelas do sistema chamado Picom (13), sofreu
@@ -180,8 +182,8 @@ software (17). Uma versão adicionou a capacidade de ter bordas redondas nas
 janelas e o efeito de blur (14), outra melhorou o efeito de blur utilizando
 um algorítmo mais performático (15) e por fim a terceira tenta juntar ambas
 features mas não consegue se manter sempre atualizada (16) pois falta
-contribuintes e os donos originais não abandonam suas visões do projeto
-o que os fazem se manter com suas próprias versões. 
+contribuintes e os donos originais não abandonam suas visões do projeto,
+o que faz com que eles se mantenham com suas próprias versões. 
 
 Além de gerar inconsistências entre os projetos, os usuários que resolvem
 utilizar esses compositores se prejudicam pois precisam decidir entre
